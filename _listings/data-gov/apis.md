@@ -12,11 +12,66 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "10"
 x-alexaRank: "0"
 tags: Harvest
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/apis.md
 specificationVersion: "0.14"
 apis:
+- name: Data.gov API - Get Harvest Backends
+  x-api-slug: harvestbackends-get
+  description: List all available harvest backends
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestbackends-get-openapi.md
+- name: Data.gov API - Get Harvest Job
+  x-api-slug: harvestjobident-get
+  description: List all jobs for a given source
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestjobident-get-openapi.md
+- name: Data.gov API - Get Harvest Job Status
+  x-api-slug: harvestjob-status-get
+  description: List all available harvesters
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestjob-status-get-openapi.md
+- name: Data.gov API - Delete Harvest Source Ent
+  x-api-slug: harvestsourceident-delete
+  description: ""
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsourceident-delete-openapi.md
+- name: Data.gov API - Get Harvest Source Ent
+  x-api-slug: harvestsourceident-get
+  description: Get a single source given an ID or a slug
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsourceident-get-openapi.md
 - name: Data.gov API - Get Harvest Source Ent Jobs
   x-api-slug: harvestsourceidentjobs-get
   description: List all jobs for a given source
@@ -30,6 +85,28 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsourceidentjobs-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsourceidentjobs-get-openapi.md
+- name: Data.gov API - Get Harvest Source Ent Preview
+  x-api-slug: harvestsourceidentpreview-get
+  description: Preview a single harvest source given an ID or a slug
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsourceidentpreview-get-openapi.md
+- name: Data.gov API - Add Harvest Source Ent Valate
+  x-api-slug: harvestsourceidentvalidate-post
+  description: Validate or reject an harvest source
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsourceidentvalidate-post-openapi.md
 - name: Data.gov API - Get Harvest Sources
   x-api-slug: harvestsources-get
   description: List all harvest sources
@@ -43,6 +120,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsources-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsources-get-openapi.md
+- name: Data.gov API - Add Harvest Sources
+  x-api-slug: harvestsources-post
+  description: Create a new harvests source
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/harvest/master/_listings/data-gov/harvestsources-post-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://danske.bank.api.gallery.streamdata.io

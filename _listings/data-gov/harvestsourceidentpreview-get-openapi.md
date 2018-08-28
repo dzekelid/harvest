@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: Data.Gov
-x-complete: 1
+x-complete: 0
 info:
-  title: Data.gov API
-  description: the-data-gov-catalog-is-powered-by-ckan-a-powerful-open-source-data-platform-that-includes-a-robust-api--please-be-aware-that-data-gov-and-the-data-gov-ckan-api-only-contain-metadata-about-datasets--this-metadata-includes-urls-and-descriptions-of-datasets-but-it-does-not-include-the-actual-data-within-each-dataset-
+  title: Data.gov API Get Harvest Source Ent Preview
+  description: Preview a single harvest source given an ID or a slug
   version: "3"
 host: catalog.data.gov
 basePath: /api/3/
@@ -135,57 +136,17 @@ paths:
       - Source
       - Ent
       - Preview
-  /harvest/source/{ident}/validate:
-    post:
-      summary: Add Harvest Source Ent Valate
-      description: Validate or reject an harvest source
-      operationId: postHarvestSourceEntValate
-      x-api-path-slug: harvestsourceidentvalidate-post
-      parameters:
-      - in: path
-        name: ident
-        description: A source ID or slug
-      - in: body
-        name: payload
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Source
-      - Ent
-      - Valate
-  /harvest/sources/:
-    get:
-      summary: Get Harvest Sources
-      description: List all harvest sources
-      operationId: getHarvestSources
-      x-api-path-slug: harvestsources-get
-      parameters:
-      - in: query
-        name: owner
-        description: The organization or user ID to filter on
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Sources
-    post:
-      summary: Add Harvest Sources
-      description: Create a new harvests source
-      operationId: postHarvestSources
-      x-api-path-slug: harvestsources-post
-      parameters:
-      - in: body
-        name: payload
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Sources
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

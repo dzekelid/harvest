@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Data.Gov
 x-complete: 0
 info:
-  title: Data.gov API Get Harvest Source Ent Jobs
-  description: List all jobs for a given source
+  title: Data.gov API Get Harvest Job Status
+  description: List all available harvesters
   version: "3"
 host: catalog.data.gov
 basePath: /api/3/
@@ -62,62 +62,6 @@ paths:
       - Harvest
       - Job
       - Status
-  /harvest/source/{ident}:
-    delete:
-      summary: Delete Harvest Source Ent
-      description: ""
-      operationId: deleteHarvestSourceEnt
-      x-api-path-slug: harvestsourceident-delete
-      parameters:
-      - in: path
-        name: ident
-        description: A source ID or slug
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Source
-      - Ent
-    get:
-      summary: Get Harvest Source Ent
-      description: Get a single source given an ID or a slug
-      operationId: getHarvestSourceEnt
-      x-api-path-slug: harvestsourceident-get
-      parameters:
-      - in: path
-        name: ident
-        description: A source ID or slug
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Source
-      - Ent
-  /harvest/source/{ident}/jobs/:
-    get:
-      summary: Get Harvest Source Ent Jobs
-      description: List all jobs for a given source
-      operationId: getHarvestSourceEntJobs
-      x-api-path-slug: harvestsourceidentjobs-get
-      parameters:
-      - in: path
-        name: ident
-      - in: query
-        name: page
-        description: The page to fetch
-      - in: query
-        name: page_size
-        description: The page size to fetch
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Source
-      - Ent
-      - Jobs
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

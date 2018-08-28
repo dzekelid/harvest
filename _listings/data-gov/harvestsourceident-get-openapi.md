@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Data.Gov
 x-complete: 0
 info:
-  title: Data.gov API Get Harvest Sources
-  description: List all harvest sources
+  title: Data.gov API Get Harvest Source Ent
+  description: Get a single source given an ID or a slug
   version: "3"
 host: catalog.data.gov
 basePath: /api/3/
@@ -95,85 +95,6 @@ paths:
       - Harvest
       - Source
       - Ent
-  /harvest/source/{ident}/jobs/:
-    get:
-      summary: Get Harvest Source Ent Jobs
-      description: List all jobs for a given source
-      operationId: getHarvestSourceEntJobs
-      x-api-path-slug: harvestsourceidentjobs-get
-      parameters:
-      - in: path
-        name: ident
-      - in: query
-        name: page
-        description: The page to fetch
-      - in: query
-        name: page_size
-        description: The page size to fetch
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Source
-      - Ent
-      - Jobs
-  /harvest/source/{ident}/preview:
-    get:
-      summary: Get Harvest Source Ent Preview
-      description: Preview a single harvest source given an ID or a slug
-      operationId: getHarvestSourceEntPreview
-      x-api-path-slug: harvestsourceidentpreview-get
-      parameters:
-      - in: path
-        name: ident
-        description: A source ID or slug
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Source
-      - Ent
-      - Preview
-  /harvest/source/{ident}/validate:
-    post:
-      summary: Add Harvest Source Ent Valate
-      description: Validate or reject an harvest source
-      operationId: postHarvestSourceEntValate
-      x-api-path-slug: harvestsourceidentvalidate-post
-      parameters:
-      - in: path
-        name: ident
-        description: A source ID or slug
-      - in: body
-        name: payload
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Source
-      - Ent
-      - Valate
-  /harvest/sources/:
-    get:
-      summary: Get Harvest Sources
-      description: List all harvest sources
-      operationId: getHarvestSources
-      x-api-path-slug: harvestsources-get
-      parameters:
-      - in: query
-        name: owner
-        description: The organization or user ID to filter on
-      responses:
-        200:
-          description: OK
-      tags:
-      - Harvest
-      - Sources
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
